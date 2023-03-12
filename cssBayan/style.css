@@ -1,0 +1,116 @@
+/* mobile 320x568
+tablet 820x1180
+desktop 1920×1080 */
+
+/* Все блоки/части аккордеона находятся в базовом потоке элементов дом. 
+Все элементы не позиционируются с помощью top, left, right, bottom.
+floatне используется. Значение positionвсего static +5 */
+
+/* Используются только гибкие размеры rem, em, %, vh, vw, fr */
+html {
+    position: static;
+    scroll-behavior: smooth;
+    height: 100%;
+    font-size: 1em;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #C0C0C0;
+    margin: 0; 
+    padding: 4em;
+}
+
+section {
+    cursor: pointer;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #909090;
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+.title:hover .image {
+    display: flex;
+}
+.title + input {
+    display: none;
+}
+
+.title + input + div {
+    display: none;
+}
+
+.title + input:checked + div {
+    display: flex;
+}
+
+.title:has(+ input:checked) h2 {
+    color: #000000;
+}
+
+.title:has(+ input:checked)  .state-icon {
+    transform: rotate(-45deg);
+}
+
+.image {
+    /* display: flex; */
+    /* display: none; */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.foto {
+    cursor: pointer;
+}
+
+.h2 {
+    cursor: pointer; 
+}
+
+main h2 {
+    color: #0356fc;
+}
+
+main:hover h2 {
+    color: #000000;
+}
+
+main:hover .state-icon {
+    display: block;
+}
+
+label .state-icon {
+    display: none;
+}
+
+i.invisible {
+    display: none;
+}
+ 
+.fa-solid .fa-plus {
+    cursor: pointer;
+}
+.fa-solid .fa-xmark {
+    cursor: pointer;
+}
+
+@media (max-width: 320px), (max-height: 658px) {
+    html { font-size: 1vw; }
+    img { max-width: 70% }
+}
+@media (max-width: 820px), (max-height: 1180px) {
+    html { font-size: 1vw;}
+    img { max-width: 80% }
+}
+
+@media (max-width: 1920px), (max-height: 1080px) {
+    html { font-size: 2vw }
+    img { max-width: 90% }
+}
