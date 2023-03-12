@@ -13,15 +13,18 @@ html {
     height: 100%;
     font-size: 1em;
 }
+
 body {
     min-height: 100vh;
     background-color: #C0C0C0;
     margin: 0; 
     padding: 4em;
 }
+
 section {
     cursor: pointer;
 }
+
 .title {
     display: flex;
     flex-direction: row;
@@ -31,18 +34,30 @@ section {
     margin-top: 1em;
     cursor: pointer;
 }
-/* .title:focus .image {
+
+.title:hover .image {
     display: flex;
-} */
+}
 .title + input {
     display: none;
 }
+
 .title + input + div {
     display: none;
 }
-.title + input:checked + div{
+
+.title + input:checked + div {
     display: flex;
 }
+
+.title:has(+ input:checked) h2 {
+    color: #000000;
+}
+
+.title:has(+ input:checked)  .state-icon {
+    transform: rotate(-45deg);
+}
+
 .image {
     /* display: flex; */
     /* display: none; */
@@ -51,19 +66,30 @@ section {
     cursor: pointer;
 }
 
-
 .foto {
     cursor: pointer;
 }
+
 .h2 {
     cursor: pointer; 
 }
+
 main h2 {
     color: #0356fc;
 }
+
 main:hover h2 {
     color: #000000;
 }
+
+main:hover .state-icon {
+    display: block;
+}
+
+label .state-icon {
+    display: none;
+}
+
 i.invisible {
     display: none;
 }
