@@ -1,0 +1,31 @@
+/* mobile 320x568
+tablet 820x1180
+desktop 1920×1080 */
+
+/* Все блоки/части аккордеона находятся в базовом потоке элементов дом. 
+Все элементы не позиционируются с помощью top, left, right, bottom.
+floatне используется. Значение positionвсего static +5 */
+
+/* Используются только гибкие размеры rem, em, %, vh, vw, fr */
+html {
+    position: static;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+body {
+    min-height: 100vh;
+    background-color: #C0C0C0;
+    margin: 0; 
+    padding: 4em;
+}
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
