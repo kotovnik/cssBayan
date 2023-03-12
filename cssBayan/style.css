@@ -11,6 +11,7 @@ html {
     position: static;
     scroll-behavior: smooth;
     height: 100%;
+    font-size: 1em;
 }
 body {
     min-height: 100vh;
@@ -28,4 +29,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 320px), (max-height: 658px) {
+    html { font-size: 1vw; }
+    img { max-width: 70% }
+}
+@media (max-width: 820px), (max-height: 1180px) {
+    html { font-size: 1vw;}
+    img { max-width: 80% }
+}
+
+@media (max-width: 1920px), (max-height: 1080px) {
+    html { font-size: 2vw }
+    img { max-width: 90% }
 }
